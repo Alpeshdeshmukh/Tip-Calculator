@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+  <title>Tip Calculator</title>
+<style>
+  
+       body{
+            font-family: "comic sans ms",sans-serif;
+            background-color: red;
+          }
+      #form{ width:300px;
+            height:500px;
+            background: white;
+            border-radius: 20px;
+            margin:100px auto;
+            }
+           p{
+            padding-left: 20px;
+            font-size: 16px;
+             }
+        #cal{
+            width:100px;
+            height:40px;
+            background:darkblue;
+            color:white;
+            display:block;
+            margin:20px auto;
+
+           }
+         h1{
+            background: darkblue;
+            color:white;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            padding-left: 10px;
+           }
+        #select{
+            font-size: 15px;
+            padding:10px 10px 20px 20px;
+            margin-left: 20px;
+          }
+          #tip{
+        padding-bottom: 0;
+            font-size: 20px;
+            margin-left: 130px;
+          
+        
+
+          }
+          input{
+            padding:10px;
+        }
+</style>
+    <script>
+        
+
+        function summ()
+         {
+        var x=document.getElementById("amt").value;
+         var y=document.getElementById("select").value;
+         var k=document.getElementById("p").value;
+        var z=(((parseInt(x)*parseInt(y)/100)/k));
+  
+         document.getElementById("sum").innerHTML = z.toFixed(2);
+  
+         }
+  
+  
+      </script>
+</head>
+<body>
+  <div id="form">
+    <h1>TIP CALCULATER</h1>
+
+  <p>How much was your bill?</p>
+  <p>$  <input type="number" id="amt"></p>
+  <p>How was your service?</p>
+  <select id="select">
+      <option value="30">Outstanding 30%</option>
+      <option value="20">Better 20%</option>
+      <option value="10">Good 10%</option>
+      <option value="0">Poor 0%</option>
+
+  </select>
+  <p>How many people are sharing the bill?</label>
+  <p><input type="number" id="p" >  people</p>
+ <button id="cal" onclick="summ()">Sum</button>
+  
+    <!-- <button  onclick="summ()">Sum</button> -->
+   
+   <div id="tip"> <sup>$</sup><span id="sum">0.00</span>  <small id="tip1">Each</small> </div>
+
+   </div>
+</body>
+</html>
